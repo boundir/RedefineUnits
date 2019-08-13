@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>8aab8054-a1a5-4ec8-b5c5-8f54842ba7af</Guid>
+    <Name>RedefineUnits</Name>
+    <Description>This mod allows you to change some options from units.
+tags= War of the Chosen, Config, Gameplay</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>RedefineUnits</AssemblyName>
+    <RootNamespace>RedefineUnits</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Localization\" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\RedefineUnits\" />
+    <Folder Include="Src\RedefineUnits\Classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\XComRedefineUnits.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="ModPreview.jpg" />
+    <Content Include="Config\XComEditor.ini" />
+    <Content Include="Config\XComEngine.ini" />
+    <Content Include="Config\XComGame.ini" />
+    <Content Include="Localization\XComGame.int" />
+    <Content Include="Src\RedefineUnits\Classes\OPTC_Characters.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\RedefineUnits\Classes\X2DownloadableContentInfo_RedefineUnits.uc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+</Project>
