@@ -8,6 +8,12 @@ struct native CharacterNames
 	var Name IsWeakToBluescreen;
 	var Name IsHiddenFromShadowChamber;
 	var Name IsImmueToFalling;
+	var Name IsHostileCivilian;
+	var Name IsCivilian;
+	var Name CanBeCarried;
+	var Name IsAfraidOfFire;
+	var Name CanTakeCover;
+	var Name WearArmorInBase;
 };
 
 var config array<CharacterNames> Characters;
@@ -123,6 +129,114 @@ static event OnPostTemplatesCreated()
 					else
 					{
 						`LOG(CharacterConfig.IsImmueToFalling @ "is neither true or false", ,'Redefine Units');
+					}
+				}
+				// Unit is hostile civilian
+				if(CharacterConfig.IsHostileCivilian != '')
+				{
+					if(CharacterConfig.IsHostileCivilian == 'TRUE')
+					{
+						CharacterTemplate.bIsHostileCivilian = true;
+						`LOG(CharacterConfig.TemplateName @ "is hostile civilian", ,'Redefine Units');
+					}
+					else if(CharacterConfig.IsHostileCivilian == 'FALSE')
+					{
+						CharacterTemplate.bIsHostileCivilian = false;
+						`LOG(CharacterConfig.TemplateName @ "is not hostile civilian", ,'Redefine Units');
+					}
+					else
+					{
+						`LOG(CharacterConfig.IsHostileCivilian @ "is neither true or false", ,'Redefine Units');
+					}
+				}
+				// Unit is civilian
+				if(CharacterConfig.IsCivilian != '')
+				{
+					if(CharacterConfig.IsCivilian == 'TRUE')
+					{
+						CharacterTemplate.bIsCivilian = true;
+						`LOG(CharacterConfig.TemplateName @ "is civilian", ,'Redefine Units');
+					}
+					else if(CharacterConfig.IsCivilian == 'FALSE')
+					{
+						CharacterTemplate.bIsCivilian = false;
+						`LOG(CharacterConfig.TemplateName @ "is not civilian", ,'Redefine Units');
+					}
+					else
+					{
+						`LOG(CharacterConfig.IsCivilian @ "is neither true or false", ,'Redefine Units');
+					}
+				}
+				// Unit can be carried
+				if(CharacterConfig.CanBeCarried != '')
+				{
+					if(CharacterConfig.CanBeCarried == 'TRUE')
+					{
+						CharacterTemplate.bCanBeCarried = true;
+						`LOG(CharacterConfig.TemplateName @ "can be carried", ,'Redefine Units');
+					}
+					else if(CharacterConfig.CanBeCarried == 'FALSE')
+					{
+						CharacterTemplate.bCanBeCarried = false;
+						`LOG(CharacterConfig.TemplateName @ "cannot be carried", ,'Redefine Units');
+					}
+					else
+					{
+						`LOG(CharacterConfig.CanBeCarried @ "is neither true or false", ,'Redefine Units');
+					}
+				}
+				// Unit is afraid of fire
+				if(CharacterConfig.IsAfraidOfFire != '')
+				{
+					if(CharacterConfig.IsAfraidOfFire == 'TRUE')
+					{
+						CharacterTemplate.bIsAfraidOfFire = true;
+						`LOG(CharacterConfig.TemplateName @ "is afraid of fire", ,'Redefine Units');
+					}
+					else if(CharacterConfig.IsAfraidOfFire == 'FALSE')
+					{
+						CharacterTemplate.bIsAfraidOfFire = false;
+						`LOG(CharacterConfig.TemplateName @ "is not afraid of fire", ,'Redefine Units');
+					}
+					else
+					{
+						`LOG(CharacterConfig.IsAfraidOfFire @ "is neither true or false", ,'Redefine Units');
+					}
+				}
+				// Unit can take cover
+				if(CharacterConfig.CanTakeCover != '')
+				{
+					if(CharacterConfig.CanTakeCover == 'TRUE')
+					{
+						CharacterTemplate.bCanTakeCover = true;
+						`LOG(CharacterConfig.TemplateName @ "can take cover", ,'Redefine Units');
+					}
+					else if(CharacterConfig.CanTakeCover == 'FALSE')
+					{
+						CharacterTemplate.bCanTakeCover = false;
+						`LOG(CharacterConfig.TemplateName @ "cannot take cover", ,'Redefine Units');
+					}
+					else
+					{
+						`LOG(CharacterConfig.CanTakeCover @ "is neither true or false", ,'Redefine Units');
+					}
+				}
+				// Unit wears armor in base
+				if(CharacterConfig.WearArmorInBase != '')
+				{
+					if(CharacterConfig.WearArmorInBase == 'TRUE')
+					{
+						CharacterTemplate.bWearArmorInBase = true;
+						`LOG(CharacterConfig.TemplateName @ "wears armor in base", ,'Redefine Units');
+					}
+					else if(CharacterConfig.WearArmorInBase == 'FALSE')
+					{
+						CharacterTemplate.bWearArmorInBase = false;
+						`LOG(CharacterConfig.TemplateName @ "doesn't wear armor in base", ,'Redefine Units');
+					}
+					else
+					{
+						`LOG(CharacterConfig.WearArmorInBase @ "is neither true or false", ,'Redefine Units');
 					}
 				}
 			}

@@ -9,19 +9,37 @@ Modify [u]XComRedefineUnits.ini[/u] to do so.
 [b]Required[/b] - Name of the template modified.
 
 [u]IsWeakToBluescreen[/u] - [i]Bool[/i]
-[b]Optional[/b] - Change weather or not this unit will be weak to Bluescreen, Emp...
+[b]Optional[/b] - Change whether or not this unit will be weak to Bluescreen, Emp...
 
 [u]IsPsionic[/u] - [i]Bool[/i]
-[b]Optional[/b] - Change weather or not this unit will be psionic.
+[b]Optional[/b] - Change whether or not this unit will be psionic.
 
 [u]IsHiddenFromShadowChamber[/u] - [i]Bool[/i]
-[b]Optional[/b] - Change weather or not this unit will be hidden from Shadow Chamber.
+[b]Optional[/b] - Change whether or not this unit will be hidden from Shadow Chamber.
 
 [u]IsImmueToFalling[/u] - [i]Bool[/i]
-[b]Optional[/b] - Change weather or not this unit will take damage from falling.
+[b]Optional[/b] - Change whether or not this unit will take damage from falling.
 
 [u]IsRobotic[/u] - [i]Bool[/i]
-[b]Optional[/b] - Change weather or not this unit will be robotic.
+[b]Optional[/b] - Change whether or not this unit will be robotic.
+
+[u]IsCivilian[/u] - [i]Bool[/i]
+[b]Optional[/b] - Change whether or not this unit is a civilian.
+
+[u]IsHostileCivilian[/u] - [i]Bool[/i]
+[b]Optional[/b] - Change whether or not this unit is an hostile civilian.
+
+[u]CanBeCarried[/u] - [i]Bool[/i]
+[b]Optional[/b] - Change whether or not this unit can be carried when incapacitated
+
+[u]IsAfraidOfFire[/u] - [i]Bool[/i]
+[b]Optional[/b] - Change whether or not this unit will panic when set on fire - only applies to flamethrower
+
+[u]CanTakeCover[/u] - [i]Bool[/i]
+[b]Optional[/b] - Change whether or not can take cover. By default should be true, but certain large units, like mecs and andromedons, etc, don't take cover, so set to false.
+
+[u]WearArmorInBase[/u] - [i]Bool[/i]
+[b]Optional[/b] - Change whether or not this unit should wear their full armor around the base instead of an underlay.
 
 [h1]Usage[/h1]
 
