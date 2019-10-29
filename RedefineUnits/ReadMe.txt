@@ -23,6 +23,12 @@ Modify [u]XComRedefineUnits.ini[/u] to do so.
 [u]IsRobotic[/u] - [i]Bool[/i]
 [b]Optional[/b] - Change whether or not this unit will be robotic.
 
+[u]IsHumanoid[/u] - [i]Bool[/i]
+[b]Optional[/b] - Change whether or not this unit will be humanoid. Added for targeting. Only ExludeNonHumanoidAliens uses it. 2 Aliens specify humanoid, Spectre and Codex.
+
+[u]IsAlien[/u] - [i]Bool[/i]
+[b]Optional[/b] - Change whether or not this unit will be alien.
+
 [u]IsCivilian[/u] - [i]Bool[/i]
 [b]Optional[/b] - Change whether or not this unit is a civilian.
 

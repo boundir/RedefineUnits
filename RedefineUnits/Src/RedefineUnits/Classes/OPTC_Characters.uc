@@ -14,6 +14,14 @@ struct native CharacterNames
 	var Name IsAfraidOfFire;
 	var Name CanTakeCover;
 	var Name WearArmorInBase;
+	var Name IsHumanoid;
+	var Name IsAlien;
+	// TODO
+	var Name DefaultLoadout;
+	var Name bCanUse_eTraversal_Phasing;
+	var Name strBehaviorTree;
+	var Name strScamperBT;
+	var Int AIOrderPriority;
 };
 
 var config array<CharacterNames> Characters;
@@ -237,6 +245,42 @@ static event OnPostTemplatesCreated()
 					else
 					{
 						`LOG(CharacterConfig.WearArmorInBase @ "is neither true or false", ,'Redefine Units');
+					}
+				}
+				// Unit is Humanoid
+				if(CharacterConfig.IsHumanoid != '')
+				{
+					if(CharacterConfig.IsHumanoid == 'TRUE')
+					{
+						CharacterTemplate.bIsHumanoid = true;
+						`LOG(CharacterConfig.TemplateName @ "wears armor in base", ,'Redefine Units');
+					}
+					else if(CharacterConfig.IsHumanoid == 'FALSE')
+					{
+						CharacterTemplate.bIsHumanoid = false;
+						`LOG(CharacterConfig.TemplateName @ "doesn't wear armor in base", ,'Redefine Units');
+					}
+					else
+					{
+						`LOG(CharacterConfig.IsHumanoid @ "is neither true or false", ,'Redefine Units');
+					}
+				}
+				// Unit is Alien
+				if(CharacterConfig.IsAlien != '')
+				{
+					if(CharacterConfig.IsAlien == 'TRUE')
+					{
+						CharacterTemplate.bIsAlien = true;
+						`LOG(CharacterConfig.TemplateName @ "wears armor in base", ,'Redefine Units');
+					}
+					else if(CharacterConfig.IsAlien == 'FALSE')
+					{
+						CharacterTemplate.bIsAlien = false;
+						`LOG(CharacterConfig.TemplateName @ "doesn't wear armor in base", ,'Redefine Units');
+					}
+					else
+					{
+						`LOG(CharacterConfig.IsAlien @ "is neither true or false", ,'Redefine Units');
 					}
 				}
 			}
