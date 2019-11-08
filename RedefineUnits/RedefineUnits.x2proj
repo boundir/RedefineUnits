@@ -29,6 +29,9 @@ tags= War of the Chosen, Config, Gameplay</Description>
     <Content Include="Src\RedefineUnits\Classes\OPTC_Characters.uc">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Src\RedefineUnits\Classes\RU_Helpers.uc">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Src\RedefineUnits\Classes\X2DownloadableContentInfo_RedefineUnits.uc" />
   </ItemGroup>
   <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />

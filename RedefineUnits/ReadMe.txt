@@ -6,7 +6,10 @@ Modify [u]XComRedefineUnits.ini[/u] to do so.
 [h1]Variables[/h1]
 
 [u]TemplateName[/u] - [i]String[/i]
-[b]Required[/b] - Name of the template modified.
+[b]Optional[/b] - Name of the template modified.
+
+[u]GroupName[/u] - [i]String[/i]
+[b]Optional[/b] - Name of the character group name being modified.
 
 [u]IsWeakToBluescreen[/u] - [i]Bool[/i]
 [b]Optional[/b] - Change whether or not this unit will be weak to Bluescreen, Emp...
@@ -57,6 +60,7 @@ Those are examples with vanilla enemies
 [code]
 [RedefineUnits.OPTC_Characters]
 +Characters=(TemplateName=Gatekeeper, IsWeakToBluescreen=true)
++Characters=(GroupName=Gatekeeper, IsWeakToBluescreen=true)
 +Characters=(TemplateName=Sectoid, IsPsionic=true)
 +Characters=(TemplateName=ArchonKing, IsHiddenFromShadowChamber=true)
 +Characters=(TemplateName=Archon, IsImmueToFalling=true)
@@ -64,6 +68,7 @@ Those are examples with vanilla enemies
 [/code]
 [list]
 [*] Gatekeeper is not Robotic but is weak against Tech (Bluescreen, EMP).
+[*] All Characters from Gatekeeper group are not weak against Tech (Bluescreen, EMP).
 [*] Sectoid is a Psionic unit.
 [*] Archon King will not show in the Shadow Chamber informations.
 [*] Archon won't take damage from falling.
@@ -72,9 +77,6 @@ Those are examples with vanilla enemies
 
 [h1]Compatibility[/h1]
 It should be compatible with everything.
-
-[h1]Note[/h1]
-More variables will be added in the future.
 
 [h1]Troubleshooting[/h1]
 https://www.reddit.com/r/xcom2mods/wiki/mod_troubleshooting
