@@ -2,7 +2,24 @@ class OPTC_Characters extends X2DownloadableContentInfo config(RedefineUnits);
 
 `define RU_Log(msg) `Log(`msg,, 'RedefineUnits')
 
-struct native CharacterNames
+struct StatReferenced
+{
+	var ECharStatType StatRef;
+	var float PercentValue;
+};
+
+struct StatOperations
+{
+	var ECharStatType Stat;
+	var int Add;
+	var int Substract;
+	var float MultiplyBy;
+	var float DivideBy;
+	var int Set;
+	var array<StatReferenced> PercentOf;
+};
+
+struct CharacterNames
 {
 	var Name TemplateName;
 	var Name IsPsionic;
@@ -19,6 +36,7 @@ struct native CharacterNames
 	var Name IsHumanoid;
 	var Name IsAlien;
 	var Name GroupName;
+	var array<StatOperations> StatModifiers;
 	// TODO
 	var Name DefaultLoadout;
 	var Name bCanUse_eTraversal_Phasing;
@@ -60,12 +78,12 @@ static function PatchCharacterTemplates()
 			if (CharacterTemplate != none)
 			{
 				ScanGroup = default.Characters.Find('GroupName', CharacterTemplate.CharacterGroupName);
-				if (ScanGroup != INDEX_NONE)
+				if (ScanGroup != INDEX_NONE && default.Characters[ScanGroup].GroupName != '')
 				{
 					class'RU_Helpers'.static.ModifyTemplate(CharacterTemplate, default.Characters[ScanGroup]);
 				}
 				ScanCharacter = default.Characters.Find('TemplateName', CharacterTemplate.DataName);
-				if (ScanCharacter != INDEX_NONE)
+				if (ScanCharacter != INDEX_NONE && default.Characters[ScanCharacter].TemplateName != '')
 				{
 					class'RU_Helpers'.static.ModifyTemplate(CharacterTemplate, default.Characters[ScanCharacter]);
 				}

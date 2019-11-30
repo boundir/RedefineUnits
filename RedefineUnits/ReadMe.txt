@@ -50,6 +50,9 @@ Modify [u]XComRedefineUnits.ini[/u] to do so.
 [u]WearArmorInBase[/u] - [i]Bool[/i]
 [b]Optional[/b] - Change whether or not this unit should wear their full armor around the base instead of an underlay.
 
+[u]StatModifiers[/u] - [i]Bool[/i]
+[b]Optional[/b] - Can change stats from units. See discussion [url=steamcommunity.com/workshop/filedetails/discussion/1816814581/1640927858846518403/]here[/url].
+
 [h1]Usage[/h1]
 
 Can be used by other mods to create modify units by adding [u]XComRedefineUnits.ini[/u] to the mod config.
