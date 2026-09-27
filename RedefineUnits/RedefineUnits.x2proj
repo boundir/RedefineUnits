@@ -18,6 +18,8 @@ tags= War of the Chosen, Config, Gameplay</Description>
     <Folder Include="Src" />
     <Folder Include="Src\RedefineUnits" />
     <Folder Include="Src\RedefineUnits\Classes" />
+    <Folder Include="Src\WallClimbOverride" />
+    <Folder Include="Src\WallClimbOverride\Classes" />
     <Content Include="ModPreview.jpg" />
     <Content Include="PublishedFileId.ID" />
     <Content Include="ReadMe.txt" />
@@ -30,5 +32,6 @@ tags= War of the Chosen, Config, Gameplay</Description>
     <Content Include="Src\RedefineUnits\Classes\OPTC_Characters.uc" />
     <Content Include="Src\RedefineUnits\Classes\RU_Helpers.uc" />
     <Content Include="Src\RedefineUnits\Classes\X2DLCInfo_RedefineUnits.uc" />
+    <Content Include="Src\WallClimbOverride\Classes\X2Action_MoveClimbWall_Override.uc" />
   </ItemGroup>
 </Project>
